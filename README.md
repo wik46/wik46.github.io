@@ -1,2 +1,1 @@
-# wik46.github.io
-My Personal Page
+Lodewyk JvRensburg's Webpage 
