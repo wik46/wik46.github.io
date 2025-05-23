@@ -29,10 +29,33 @@ ul li ul li {
 }
 ul li ul li a {display:block !important;} 
 ul li ul li:hover {background: #666;}
+
+  .visual-block {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .visual-block h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    .visual-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
 </style>
 </head>
 <body>
-  <div>
+  <div >
   <a href="https://wik46.github.io/index.html">Home</a>
   <ul>
     <li>
@@ -47,12 +70,12 @@ ul li ul li:hover {background: #666;}
     </li>
   </ul>
 </div>
-<div >
+<div class="visual-block">
     <h2>Visual 1: Visualize the Tangent Line to a Curve</h2>
-    <iframe width='800' height='800' src='https://www.wolframcloud.com/obj/lodewykjansenva/3DCurveVisualizer' frameborder='0'></iframe>
+    <iframe  src='https://www.wolframcloud.com/obj/lodewykjansenva/3DCurveVisualizer' frameborder='0'></iframe>
   </div>
 
-  <div >
+  <div class="visual-block">
     <h2>Visual 2: A Surface in Space</h2>
      <iframe width='800' height='800' src='https://www.wolframcloud.com/obj/5df51dbb-dc54-4b61-905e-c91ebf2352f5' frameborder='0'></iframe>
   </div>
