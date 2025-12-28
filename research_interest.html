@@ -6,7 +6,11 @@
   <title>Research</title>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<!-- Make sure MathJax is loaded in your <head> for latex capbable -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
   <!-- External stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -36,12 +40,17 @@
   Non-Commutative Funciton theory, Free Probability and Random Matrix Theory. 
 <figure class="research-figure">
   <img src="assets/images/spectrum.png"
-       alt="Spectrum of a random matrix arising from free probability"
-       width="500">
+       alt="Spectrum of a random unitary linear pencil"
+       width="300"> <!-- smaller image -->
 
   <figcaption>
     <strong>Figure 1.</strong>
-    Approximate spectral distribution of a random matrix model arising in free probability.
+    Approximate spectral distribution of a random unitary linear pencil
+    \(P(z) = X_1 + z X_2\) with coefficient matrices:
+    \[
+      X_1 = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}, \quad
+      X_2 = \begin{bmatrix} 0 & 1 \\ 1 & 2 \end{bmatrix}.
+    \]
   </figcaption>
 </figure>
  
