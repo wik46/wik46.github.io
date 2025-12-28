@@ -1,52 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<style>
-div {background-color: #0021A5;}
-div a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  padding: 15px;
-  display:inline-block;
-}
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {display: inline-block;}
-ul li:hover {background: #555;}
-ul li:hover ul {display: block;}
-ul li ul {
-  position: absolute;
-  width: 200px;
-  display: none;
-}
-ul li ul li { 
-  background: #555; 
-  display: block; 
-}
-ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: #666;}
-</style>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div>
-  <a href="https://wik46.github.io/index.html">Home</a>
-  <ul>
+  <nav aria-label="Main navigation">
+  <span class="menu-toggle">☰</span>
+
+  <ul id="nav-list">
+    <li><a href="index.html">Home</a></li>
+
     <li>
-      <a href="#">Dropdown</a>
-      <ul>
-        <li><a href="https://wik46.github.io/research_interest.html">Research Interest</a></li>
-        <li><a href="https://wik46.github.io/talks.html">Talks</a></li>
-        <li><a href="https://wik46.github.io/math_media.html">Teaching</a></li>
-        <li><a href="https://wik46.github.io/math_media.html">Mathematics Media</a></li>
-        <li><a href="https://wik46.github.io/useful_resources.html">Usefull Resources</a></li>
+      <a href="#" class="dropdown-toggle">Menu ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="research_interest.html">Research Interests</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="expository.html">Expository</a></li>
+        <li><a href="teaching/teaching.html">Teaching</a></li>
+        <li><a href="math_media.html">Mathematics Media</a></li>
+        <li><a href="useful_resources.html">Useful Resources</a></li>
       </ul>
     </li>
   </ul>
-</div>
+</nav>
+  <main>
 <h2>Resources By Branch</h2>
 <ol>
  <li>Non Commutative Analysis</li>
@@ -113,6 +97,9 @@ Writing by Steven G. Krantz</a></li>
   <li/>
   <li>...</li>
 </ol> 
-
+</main>
+    
+<!-- External JavaScript -->
+<script src="assets/js/nav.js" defer></script>
 </body>
 </html>
