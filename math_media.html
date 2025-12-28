@@ -6,116 +6,136 @@
   <meta name="description" content="Books, videos, and podcasts about mathematical thinking.">
   <title>Mathematics Media</title>
 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-  <a href="https://wik46.github.io/index.html">Home</a>
-  <ul>
+<nav aria-label="Main navigation">
+  <span class="menu-toggle" aria-label="Toggle menu">☰</span>
+
+  <ul id="nav-list">
+    <li><a href="index.html">Home</a></li>
+
     <li>
-      <a href="#">Menu ▾</a>
-      <ul>
-        <li><a href="https://wik46.github.io/research_interest.html">Research Interests</a></li>
-        <li><a href="https://wik46.github.io/talks.html">Talks</a></li>
-        <li><a href="https://wik46.github.io/expository.html">Expository</a></li>
-        <li><a href="https://wik46.github.io/teaching/teaching.html">Teaching</a></li>
-        <li><a href="https://wik46.github.io/math_media.html">Mathematics Media</a></li>
-        <li><a href="https://wik46.github.io/useful_resources.html">Useful Resources</a></li>
+      <a href="#" class="dropdown-toggle"
+         aria-haspopup="true"
+         aria-expanded="false">
+        Menu ▾
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="research_interest.html">Research Interests</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="expository.html">Expository</a></li>
+        <li><a href="teaching/teaching.html">Teaching</a></li>
+        <li><a href="math_media.html">Mathematics Media</a></li>
+        <li><a href="useful_resources.html">Useful Resources</a></li>
       </ul>
     </li>
   </ul>
 </nav>
 
+<main>
+
 <h1>Books</h1>
 
-<dl>
-  <dt><b>I Want To Be a Mathematician</b>, Paul Halmos</dt>
-  <dd>
+<div class="grid">
+  <div class="card">
+    <h2>I Want to Be a Mathematician</h2>
+    <p><strong>Paul Halmos</strong></p>
     <blockquote>
-      "A good stock of examples as large as possible is indispensable for a thorough understanding of any concept."
+      A good stock of examples as large as possible is indispensable for a
+      thorough understanding of any concept.
     </blockquote>
-  </dd>
+  </div>
 
-  <dt><b>The Man Who Loved Only Numbers</b>, Paul Hoffman</dt>
-  <dd>
+  <div class="card">
+    <h2>The Man Who Loved Only Numbers</h2>
+    <p><strong>Paul Hoffman</strong></p>
     <blockquote>
-      “A mathematician,” Erdős was fond of saying, “is a machine for turning coffee into theorems.”
+      A mathematician is a machine for turning coffee into theorems.
     </blockquote>
-  </dd>
+  </div>
 
-  <dt><b>The Art of Mathematics</b>, Jerry P. King</dt>
-  <dd>A reflective account of mathematical thinking and creativity.</dd>
-
-  <dt><b>Letters to a Young Mathematician</b>, Ian Stewart</dt>
-  <dd>
+  <div class="card">
+    <h2>Letters to a Young Mathematician</h2>
+    <p><strong>Ian Stewart</strong></p>
     <blockquote>
-      "Mathematics is a product of human minds but not bendable to human will."
+      Mathematics is a product of human minds but not bendable to human will.
     </blockquote>
-  </dd>
-</dl>
+  </div>
+</div>
 
 <h1>YouTube Channels</h1>
 
-<dl>
-  <dt>3Blue1Brown — Grant Sanderson</dt>
-  <dd><a href="https://www.youtube.com/@3blue1brown">Channel</a></dd>
+<div class="grid">
+  <div class="card">
+    <h2>3Blue1Brown</h2>
+    <p>Grant Sanderson</p>
+    <a href="https://www.youtube.com/@3blue1brown">Visit channel</a>
+  </div>
 
-  <dt>ThatMathThing — Joel Rosenfeld</dt>
-  <dd><a href="https://youtu.be/0v4WFmOm764">Video</a></dd>
-</dl>
+  <div class="card">
+    <h2>ThatMathThing</h2>
+    <p>Joel Rosenfeld</p>
+    <a href="https://youtu.be/0v4WFmOm764">Watch video</a>
+  </div>
+</div>
 
 <h1>Podcasts</h1>
 
-<iframe
-  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-  height="175"
-  src="https://embed.podcasts.apple.com/us/podcast/what-makes-for-good-math/id1608948873?i=1000643786974">
-</iframe>
-  
-<iframe
-  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-  height="175"
-  src="https://embed.podcasts.apple.com/us/podcast/is-there-math-beyond-the-equal-sign/id1608948873?i=1000605444549">
-</iframe>
+<div class="podcasts">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    height="175"
+    src="https://embed.podcasts.apple.com/us/podcast/is-there-math-beyond-the-equal-sign/id1608948873?i=1000605444549">
+  </iframe>
 
-<iframe
-  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-  height="175"
-  src="https://embed.podcasts.apple.com/us/podcast/alex-kontorovich-on-the-absolute-truth-of-pure-math/id1495067186?i=1000463951041">
-</iframe>
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    height="175"
+    src="https://embed.podcasts.apple.com/us/podcast/alex-kontorovich-on-the-absolute-truth-of-pure-math/id1495067186?i=1000463951041">
+  </iframe>
 
-<iframe
-  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-  height="175"
-  src="https://embed.podcasts.apple.com/us/podcast/why-study-mathematics-with-vicky-neale/id1441474794?i=1000501758438">
-</iframe>
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    height="175"
+    src="https://embed.podcasts.apple.com/us/podcast/why-study-mathematics-with-vicky-neale/id1441474794?i=1000501758438">
+  </iframe>
 
-<iframe
-  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-  height="175"
-  src="https://embed.podcasts.apple.com/us/podcast/the-accidental-streamer-with-3blue1brown/id1441474794?i=1000471941740">
-</iframe>
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    height="175"
+    src="https://embed.podcasts.apple.com/us/podcast/the-accidental-streamer-with-3blue1brown/id1441474794?i=1000471941740">
+  </iframe>
 
-<iframe
-  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-  height="175"
-  src="https://embed.podcasts.apple.com/us/podcast/the-c-word-talking-calculus-with-steven-strogatz/id1441474794?i=1000441794432">
-</iframe>
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    height="175"
+    src="https://embed.podcasts.apple.com/us/podcast/the-c-word-talking-calculus-with-steven-strogatz/id1441474794?i=1000441794432">
+  </iframe>
+</div>
 
 <p>
-In <em>Is There Mathematics Beyond the Equal Sign?</em>, the speaker emphasizes that mathematics is not a linear ladder of difficulty, but a network of interconnected ideas. Different learners approach mathematics through different pathways, and examples and theory play complementary roles.
+In <em>Is There Mathematics Beyond the Equal Sign?</em>, the speaker emphasizes
+that mathematics is not a linear ladder but a network of ideas that can be
+approached from many directions.
 </p>
+
+</main>
+
+<!-- External JavaScript -->
+<script src="nav.js" defer></script>
 
 </body>
 </html>
+
 
 
 
