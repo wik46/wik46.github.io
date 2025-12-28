@@ -1,105 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-div {background-color: #0021A5;}
-div a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  padding: 15px;
-  display:inline-block;
-}
-ul {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {display: inline-block;}
-ul li:hover {background: #555;}
-ul li:hover ul {display: block;}
-ul li ul {
-  position: absolute;
-  width: 200px;
-  display: none;
-}
-ul li ul li { 
-  background: #555; 
-  display: block; 
-}
-ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: #666;}
-</style>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematics Media</title>
 
-    
-<head>
-    <title>Mathematics Media</title>
+  <style>
+    nav {
+      background-color: #0021A5;
+    }
 
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      padding: 15px;
+      display: inline-block;
+    }
 
+    nav ul {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      position: relative;
+    }
+
+    nav ul li:hover {
+      background: #555;
+    }
+
+    nav ul li ul {
+      position: absolute;
+      width: 220px;
+      display: none;
+      background: #555;
+      z-index: 1000;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      display: block;
+    }
+
+    nav ul li ul li a {
+      display: block;
+      font-size: 18px;
+    }
+
+    nav ul li ul li:hover {
+      background: #666;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    blockquote {
+      margin: 10px 20px;
+      font-style: italic;
+    }
+  </style>
 </head>
 
 <body>
-  <div>
+
+<nav>
   <a href="https://wik46.github.io/index.html">Home</a>
   <ul>
     <li>
-      <a href="#">Dropdown</a>
+      <a href="#">Menu ▾</a>
       <ul>
-        <li><a href="https://wik46.github.io/research_interest.html">Research Interest</a></li>
-          <li><a href="https://wik46.github.io/talks.html">Talks</a></li>
+        <li><a href="https://wik46.github.io/research_interest.html">Research Interests</a></li>
+        <li><a href="https://wik46.github.io/talks.html">Talks</a></li>
         <li><a href="https://wik46.github.io/expository.html">Expository</a></li>
         <li><a href="https://wik46.github.io/teaching/teaching.html">Teaching</a></li>
         <li><a href="https://wik46.github.io/math_media.html">Mathematics Media</a></li>
-        <li><a href="https://wik46.github.io/useful_resources.html">Usefull Resources</a></li>
+        <li><a href="https://wik46.github.io/useful_resources.html">Useful Resources</a></li>
       </ul>
     </li>
   </ul>
-</div>
-           <h1>Books</h1>
+</nav>
 
-       
-
-<dl>
-    <dt><b>I Want To Be a Mathematician, by Paul Halmos</b></dt>
-    <dd>"A good stock of examples as large as possible is indispensable for a thorogouh understanding of any concept, and when I want to learn something new, I make it my first job to build one."</dd>
-    <dd>"Here you sit, and undergraduate with a calculus book open before you, or a pre-thesis graduate student with one of those books whose first ten pages at least you would like to master, 
-      or a research mathematician with an article fresh off the press - what do you do now? How do you study, how do you penetrate the darkness, how do you learn something? All I can tell you for sure is what
-      I do, but I do suspect that the same sort of thing works for everyone. It's been said before and often, but it cannot be overemphasized: study actively. Don't just read is, fight it! Ask you own questions
-    , look for your own counter examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? Where does the proof use the hypothesis?."</dd>
-    <dt><b>The Man Who Loved Only Numbers (Biography of Paul Erdos) by Paul Hoffman</b></dt>
-    <dd>"A mathematician," Erdos was fond of saying, "is a machine for turning coffee into theorems." .</dd>
-  <dt><b>The Art of Mathematics, by Jerry P. King</b></dt>
-    <dd>This is a description.</dd>
-  <dt><b>Letters to a Young Mathematician, by Ian Stewart
-</b></dt>
-    <dd>"Mathematics is a product of human minds but not bendable to human will. Exploring it is like exploring a new tract of country; you may not know what is around the corner, but you don't get to choose."</dd>
-</dl>
-
-    <h1>YouTube Channels</h1>
+<h1>Books</h1>
 
 <dl>
-  <dt>3BlueOneBrown by Grant Sanderson</dt>
-  <dd><a href="https://www.youtube.com/@3blue1brown">Here</a> </dd>
-  <dt>ThatMathThing by Joel Rosenfeld</dt>
-  <dd><a href="https://youtu.be/0v4WFmOm764?si=uREQqMlU12iPZy9S">Here</a> </dd>
+  <dt><b>I Want To Be a Mathematician</b>, Paul Halmos</dt>
+  <dd>
+    <blockquote>
+      A good stock of examples as large as possible is indispensable for a thorough understanding of any concept.
+    </blockquote>
+  </dd>
+
+  <dt><b>The Man Who Loved Only Numbers</b>, Paul Hoffman</dt>
+  <dd>
+    <blockquote>
+      “A mathematician,” Erdős was fond of saying, “is a machine for turning coffee into theorems.”
+    </blockquote>
+  </dd>
+
+  <dt><b>The Art of Mathematics</b>, Jerry P. King</dt>
+  <dd>A reflective account of mathematical thinking and creativity.</dd>
+
+  <dt><b>Letters to a Young Mathematician</b>, Ian Stewart</dt>
+  <dd>
+    <blockquote>
+      Mathematics is a product of human minds but not bendable to human will.
+    </blockquote>
+  </dd>
 </dl>
-  
-    <h1>Podcasts</h1>
-         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/what-makes-for-good-math/id1608948873?i=1000643786974"></iframe>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/is-there-math-beyond-the-equal-sign/id1608948873?i=1000605444549"></iframe>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/alex-kontorovich-on-the-absolute-truth-of-pure-math/id1495067186?i=1000463951041"></iframe>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/why-study-mathematics-with-vicky-neale/id1441474794?i=1000501758438"></iframe>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/the-accidental-streamer-with-3blue1brown/id1441474794?i=1000471941740"></iframe>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/the-c-word-talking-calculus-with-steven-strogatz/id1441474794?i=1000441794432"></iframe>
 
-<p>In "Is there Mathematics Beyond the equal sign, the speaker talks about different ways to learn Mathematics. One way is to look at examples and then develop a general theory to understand the examples, the other is to study
-the general theory and use examples to understand the general theory. She also mentions that Mathematics is not just a sequence of hurdles, getting higher and higher, but rather as network ideas, where you
-can approach a topic from multiple directions. The emphasis is that different people learn Mathematics with different approaches.</p>
-    
+<h1>YouTube Channels</h1>
 
+<dl>
+  <dt>3Blue1Brown — Grant Sanderson</dt>
+  <dd><a href="https://www.youtube.com/@3blue1brown">Channel</a></dd>
+
+  <dt>ThatMathThing — Joel Rosenfeld</dt>
+  <dd><a href="https://youtu.be/0v4WFmOm764">Video</a></dd>
+</dl>
+
+<h1>Podcasts</h1>
+
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="175"
+  style="width:100%;max-width:660px;border-radius:10px;"
+  src="https://embed.podcasts.apple.com/us/podcast/what-makes-for-good-math/id1608948873?i=1000643786974">
+</iframe>
+
+<p>
+In <em>Is There Mathematics Beyond the Equal Sign?</em>, the speaker emphasizes that mathematics is not a linear ladder of difficulty, but a network of interconnected ideas. Different learners approach mathematics through different pathways, and examples and theory play complementary roles.
+</p>
 
 </body>
 </html>
+
 
 
