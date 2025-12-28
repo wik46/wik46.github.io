@@ -1,0 +1,145 @@
+/* =========================
+   Global variables
+   ========================= */
+:root {
+  --primary: #0021A5;
+  --dark: #333;
+  --light: #f9f9f9;
+}
+
+/* =========================
+   Base layout
+   ========================= */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: var(--light);
+  color: var(--dark);
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+h1, h2 {
+  color: var(--primary);
+}
+
+/* =========================
+   Navigation
+   ========================= */
+nav {
+  background: var(--primary);
+  padding: 0 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  font-size: 1.05rem;
+}
+
+nav li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   Dropdown
+   ========================= */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  min-width: 220px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  padding: 0.75rem 1rem;
+}
+
+li.show > .dropdown-menu {
+  display: block;
+}
+
+/* =========================
+   Mobile menu
+   ========================= */
+.menu-toggle {
+  display: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    padding: 1rem;
+  }
+}
+
+/* =========================
+   Cards / grids
+   ========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Typography
+   ========================= */
+blockquote {
+  margin: 0.5rem 0 0;
+  font-style: italic;
+}
+
+/* =========================
+   Media embeds
+   ========================= */
+iframe {
+  width: 100%;
+  max-width: 660px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border: none;
+}
