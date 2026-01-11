@@ -1,56 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head> 
   <meta charset="UTF-8">
-  <title>Linear Pencil Spectrum Analyzer 2</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    select, button {
-      padding: 8px;
-      font-size: 14px;
-    }
-
-    button {
-      grid-column: span 2;
-      cursor: pointer;
-    }
-
-    #result {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    img {
-      max-width: 100%;
-      border: 1px solid #ccc;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Pencils</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Make sure MathJax is loaded in your <head> for latex capbable -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+<nav aria-label="Main navigation">
+  <span class="menu-toggle">☰</span>
 
+  <ul id="nav-list">
+    <li><a href="index.html">Home</a></li>
+
+    <li>
+      <a href="#" class="dropdown-toggle">Menu ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="research_interest.html">Research</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="expository.html">Expository</a></li>
+        <li><a href="teaching/teaching.html">Teaching</a></li>
+        <li><a href="math_media.html">Mathematics Media</a></li>
+        <li><a href="useful_resources.html">Useful Resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  <main>
 <h1>Linear Pencil Spectrum Analyzer</h1>
 
 
@@ -64,7 +49,10 @@
   
 
 
-  
+  </main>
+      
+<!-- External JavaScript -->
+<script src="assets/js/nav.js" defer></script>
 </body>
 </html>
 <!--
