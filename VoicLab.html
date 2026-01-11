@@ -51,7 +51,7 @@
 
 <body>
 
-<h1>Linear Pencil Spectrum Analyzer 1</h1>
+<h1>Linear Pencil Spectrum Analyzer</h1>
 
 <form id="spectrumForm">
   <label for="k">Size of Coefficient Tuple (k)</label>
@@ -114,6 +114,35 @@
   });
 </script>
 
+<h2>Enter Your Name</h2>
+    <form id="greetingForm">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="name">
+        <button type="submit">Get Greeting</button>
+    </form>
+    <p>Response: <strong id="responseOutput"></strong></p>
+
+    <script>
+        document.getElementById('greetingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById('nameInput').value;
+            // Replace with your actual deployed API URL
+            const apiUrl = "YOUR_DEPLOYED_API_URL" + "?name=" + encodeURIComponent(name);
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('responseOutput').textContent = data.Greeting;
+                })
+                .catch(error => {
+                    console.error('Error calling the API:', error);
+                    document.getElementById('responseOutput').textContent = 'Error: Could not reach API.';
+                });
+        });
+    </script>
+
+  
 </body>
 </html>
 <!--
