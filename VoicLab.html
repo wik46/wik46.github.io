@@ -51,7 +51,7 @@
 
 <body>
 
-<h1>Linear Pencil Spectrum Analyzer  1</h1>
+<h1>Linear Pencil Spectrum Analyzer</h1>
 
 <form id="spectrumForm">
   <label for="k">Size of Coefficient Tuple (k)</label>
@@ -96,7 +96,8 @@
     const url =
       `${baseURL}?SizeOfCoefficientTuple=${k}` +
       `&RandomUnitarySize=${n}` +
-      `&plotStyle=${plotStyle}`;
+      `&plotStyle=${plotStyle}` +
+      `&_format=PNG`;
 
     resultDiv.innerHTML = `
       <p><strong>Computing spectrum…</strong></p>
