@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Approximate Spectrum Viewer</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    input {
+      width: 120px;
+      margin-right: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    .loading {
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Approximate Spectrum</h1>
+
+  <label>
+    Matrix size d:
+    <input id="d" type="number" value="50" min="1" />
+  </label>
+
+  <label>
+    Plot style:
+    <select id="plotStyle">
+      <option value="2D">2D</option>
+      <option value="3D">3D</option>
+    </select>
+  </label>
+
+  <button onclick="runComputation()">Compute spectrum</button>
+
+  <div id="output"></div>
+
+  <script>
+    const API_URL =
+      "https://www.wolframcloud.com/objects/lodewyk/AnalyzeSpectrumAPI";
+
+    function runComputation() {
+      const d = document.getElementById("d").value;
+      const plotStyle = document.getElementById("plotStyle").value;
+      const output = document.getElementById("output");
+
+      output.innerHTML = "<p class='loading'>Computing…</p>";
+
+      const url =
+        `${API_URL}?d=${encodeURIComponent(d)}&plotStyle=${encodeURIComponent(plotStyle)}`;
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Computation failed");
+          }
+          return response.blob();
+        })
+        .then(blob => {
+          const imgURL = URL.createObjectURL(blob);
+          output.innerHTML = `<img src="${imgURL}" alt="Spectrum plot" />`;
+        })
+        .catch(err => {
+          output.innerHTML =
+            `<p style="color:red;">Error: ${err.message}</p>`;
+        });
+    }
+  </script>
+
+</body>
+</html>
