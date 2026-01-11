@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Linear Pencil Spectrum Analyzer</title>
+  <title>Linear Pencil Spectrum Analyzer 2</title>
 
   <style>
     body {
@@ -128,7 +128,7 @@
 
             const name = document.getElementById('nameInput').value;
             // Replace with your actual deployed API URL
-            const apiUrl = "YOUR_DEPLOYED_API_URL" + "?name=" + encodeURIComponent(name);
+            const apiUrl = "https://www.wolframcloud.com/obj/lodewykjansenva/LinearPencil/test" + "?name=" + encodeURIComponent(name);
 
             fetch(apiUrl)
                 .then(response => response.json())
