@@ -53,29 +53,6 @@
 
 <h1>Linear Pencil Spectrum Analyzer</h1>
 
-<form id="spectrumForm">
-  <label for="k">Size of Coefficient Tuple (k)</label>
-  <select id="k" name="SizeOfCoefficientTuple">
-    <option value="2">2</option>
-    <option value="3">3</option>
-  </select>
-
-  <label for="n">Random Unitary Size (N)</label>
-  <select id="n" name="RandomUnitarySize">
-    <option value="100">100</option>
-    <option value="250">250</option>
-    <option value="500">500</option>
-    <option value="750">750</option>
-  </select>
-
-  <label for="plotStyle">Plot Style</label>
-  <select id="plotStyle" name="plotStyle">
-    <option value="2D">2D</option>
-    <option value="3D">3D</option>
-  </select>
-
-  <button type="submit">Analyze Spectrum</button>
-</form>
 
 <iframe
   src="https://www.wolframcloud.com/obj/lodewykjansenva/LinearPencil/AnalyzeSpectrumAPI"
@@ -85,62 +62,7 @@
 </iframe>
   
   
-<div id="result"></div>
 
-<script>
-  const form = document.getElementById("spectrumForm");
-  const resultDiv = document.getElementById("result");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const k = form.SizeOfCoefficientTuple.value;
-    const n = form.RandomUnitarySize.value;
-    const plotStyle = form.plotStyle.value;
-
-    const baseURL =
-      "https://www.wolframcloud.com/obj/lodewykjansenva/LinearPencil/AnalyzeSpectrumAPI";
-
-    const url =
-      `${baseURL}?SizeOfCoefficientTuple=${k}` +
-      `&RandomUnitarySize=${n}` +
-      `&plotStyle=${plotStyle}` +
-      `&_format=PNG`;
-
-    resultDiv.innerHTML = `
-      <p><strong>Computing spectrum…</strong></p>
-      <img src="${url}" alt="Spectrum plot">
-    `;
-  });
-</script>
-
-<h2>Enter Your Name</h2>
-    <form id="greetingForm">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" name="name">
-        <button type="submit">Get Greeting</button>
-    </form>
-    <p>Response: <strong id="responseOutput"></strong></p>
-
-    <script>
-        document.getElementById('greetingForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            const name = document.getElementById('nameInput').value;
-            // Replace with your actual deployed API URL
-            const apiUrl = "https://www.wolframcloud.com/obj/lodewykjansenva/LinearPencil/test" + "?name=" + encodeURIComponent(name);
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('responseOutput').textContent = data.Greeting;
-                })
-                .catch(error => {
-                    console.error('Error calling the API:', error);
-                    document.getElementById('responseOutput').textContent = 'Error: Could not reach API.';
-                });
-        });
-    </script>
 
   
 </body>
