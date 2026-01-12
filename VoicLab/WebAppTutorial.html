@@ -67,6 +67,12 @@
 
   <button type="submit">Submit</button>
 </form>
+<hr>   
+    <button onclick="runQuery()">Run</button>
+
+
+<h3>Result:</h3>
+<div id="result">Waiting…</div>
   </div>
 
  <div class="grid">
@@ -100,7 +106,32 @@
 
 </main>
 
-<!-- External JavaScript -->
+
+<script>
+function runQuery() {
+  const name = encodeURIComponent(document.getElementById("name").value);
+  const x = encodeURIComponent(document.getElementById("x").value);
+
+  const url =
+    "https://www.wolframcloud.com/obj/7a5188df-54d0-4a04-8f61-d6cf21c04e6d" +
+    "?name=" + name + "&x=" + x;
+
+  fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("result").innerHTML = data;
+    })
+    .catch(err => {
+      document.getElementById("result").innerText =
+        "Error: " + err;
+    });
+}
+</script>
+
+
+
+  
+<!-- External JavaScripts -->
 <script src="/assets/js/nav.js" defer></script>
 
 </body>
