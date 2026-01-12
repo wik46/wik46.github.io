@@ -77,26 +77,34 @@
       More text here
     </blockquote>
 
-    <h2>Query Wolfram Cloud</h2>
-
-<label>
+   <label>
   Name:
   <input type="text" id="name" value="Vikus">
 </label>
-<br><br>
 
 <label>
   x:
   <input type="number" id="x" value="6">
 </label>
-<br><br>
 
 <button onclick="runQuery()">Run</button>
 
 <hr>
 
-<h3>Result:</h3>
-<div id="result">Waiting…</div>
+<iframe id="resultFrame" width="100%" height="500" style="border:1px solid #ccc;"></iframe>
+
+<script>
+function runQuery() {
+  const name = encodeURIComponent(document.getElementById("name").value);
+  const x = encodeURIComponent(document.getElementById("x").value);
+
+  const url =
+    "https://www.wolframcloud.com/obj/7a5188df-54d0-4a04-8f61-d6cf21c04e6d" +
+    "?name=" + name + "&x=" + x;
+
+  document.getElementById("resultFrame").src = url;
+}
+</script>
 
   </div>
 
