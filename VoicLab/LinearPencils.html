@@ -83,6 +83,56 @@
 
 <h2>Spectral Radii of Large Random Unitary Pencils</h2>
 
+<section id="userGuide" style="background:#f9f9f9; padding:1rem 1.5rem; border:1px solid #ccc; margin-bottom:2rem; border-radius:6px;">
+  <h2>Linear Pencil Spectral Radius Visualization — User Guide</h2>
+
+  <p>
+    This web application allows you to <strong>explore the spectral properties of random linear pencils</strong> using the Wolfram Cloud. 
+    It computes and visualizes the behavior of the <strong>spectral radius</strong> (the largest absolute value of eigenvalues) for a randomly generated tuple of matrices.
+  </p>
+
+  <h3>What you can do</h3>
+  <ul>
+    <li><strong>Size of the Coefficient Matrix (k):</strong> Choose 2, 3, or 4. Larger matrices increase computation time.</li>
+    <li><strong>Plot Style (2D or 3D):</strong> 2D shows eigenvalues in the complex plane; 3D adds an extra axis for enhanced visualization.</li>
+    <li><strong>Sample Size:</strong> Number of random matrices averaged when computing spectral radius trends.</li>
+    <li><strong>Matrix Start / Stop Size:</strong> Range of matrix sizes over which the spectral radius is analyzed.</li>
+    <li><strong>Fixed Matrix Size (d):</strong> Computes the spectral radius distribution at this size and shows it as a histogram.</li>
+    <li><strong>Number of Realizations:</strong> Number of independent random matrices generated at size d to estimate the spectral radius distribution.</li>
+  </ul>
+
+  <h3>What the app does when you click "Run"</h3>
+  <ol>
+    <li>Generates a tuple of random coefficient matrices of the chosen size.</li>
+    <li>Generates random Haar unitary matrices of appropriate dimensions.</li>
+    <li>Computes and displays four plots:
+      <ul>
+        <li>Spectral Radius Growth Plot — shows how average spectral radius grows with matrix size.</li>
+        <li>Spectral Radius Variance Plot — shows variance across random samples.</li>
+        <li>Spectral Radius Histogram — probability distribution at the chosen matrix size d.</li>
+        <li>Spectrum of a Single Realization — visualizes eigenvalues for one random tuple.</li>
+      </ul>
+    </li>
+    <li>Combines all plots into a single grid image displayed in the app.</li>
+  </ol>
+
+  <h3>How to use</h3>
+  <ol>
+    <li>Select your desired parameters using the form controls.</li>
+    <li>Click <strong>Run</strong>.</li>
+    <li>Wait for the app to finish computing. Computation time increases with matrix size and number of realizations.</li>
+    <li>The resulting image will appear in the iframe below the form.</li>
+  </ol>
+
+  <h3>Notes</h3>
+  <ul>
+    <li>The computations are randomized; each run may produce slightly different results.</li>
+    <li>Larger values for <em>k</em>, <em>d</em>, or <em>numRealization</em> increase computation time.</li>
+    <li>The app is publicly accessible — no login is required.</li>
+    <li>The plots provide insight into the statistical behavior of random linear pencils for research, teaching, or exploratory experimentation.</li>
+  </ul>
+</section>
+    <!-- STart of code -->
   <label>
     Size of the Coefficient Matrix (k):
     <select id="k">
