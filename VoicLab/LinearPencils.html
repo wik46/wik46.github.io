@@ -37,18 +37,38 @@
   <main>
     <h1>Linear Pencil Spectrum Analyzer</h1>
 <label>
-   Size of the Coefficient Tuple:
-  <input type="number" id="SizeOfCoefficientTuple" value="2">
+  Size of the Coefficient Tuple:
+  <select id="SizeOfCoefficientTuple">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
 </label>
 
-<label>
-  2D or 3D Histrograms:
-  <input type="text" id="plotStyle" value="2D">
-</label>
+<br><br>
 
 <label>
-  Size of Random Haar Unitaries (100-750):
-  <input type="number" id="RandomUnitarySize" value="100">
+  2D or 3D Histograms:
+  <select id="plotStyle">
+    <option value="2D">2D</option>
+    <option value="3D">3D</option>
+  </select>
+</label>
+
+<br><br>
+
+<label>
+  Size of Random Haar Unitaries (100–750):
+  <input
+    type="number"
+    id="RandomUnitarySize"
+    min="100"
+    max="750"
+    step="1"
+    value="100"
+    required
+  >
 </label>
 
 <button onclick="runQuery()">Run</button>
