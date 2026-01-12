@@ -35,7 +35,9 @@
   </ul>
 </nav>
   <main>
-    <h1>Linear Pencil Spectrum Analyzer</h1>
+    <h1>Linear Pencils</h1>
+<h2>Spectrums of Linear Pencils in Large Random Haar Unitaries</h2>
+    
 <label>
   Size of the Coefficient Tuple:
   <select id="SizeOfCoefficientTuple">
@@ -77,6 +79,82 @@
 
 <iframe id="resultFrame" width="100%" height="500" style="border:1px solid #ccc;"></iframe>
 
+<!--     Spectral Radii               -->
+
+<h2>Spectral Radii of Large Random Unitary Pencils</h2>
+
+  <label>
+    Size of the Coefficient Matrix (k):
+    <select id="k">
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <label>
+    Plot Style:
+    <select id="plotStyle">
+      <option value="2D">2D</option>
+      <option value="3D">3D</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <label>
+    Sample Size:
+    <input type="number" id="SampleSize" value="200" min="1">
+  </label>
+
+  <br><br>
+
+  <label>
+    Matrix Start Size:
+    <input type="number" id="MatrixStartSize" value="1" min="1">
+  </label>
+
+  <br><br>
+
+  <label>
+    Matrix Stop Size:
+    <input type="number" id="MatrixStopSize" value="10" min="1">
+  </label>
+
+  <br><br>
+
+  <label>
+    Fixed Matrix Size (d):
+    <input type="number" id="d" value="10" min="1">
+  </label>
+
+  <br><br>
+
+  <label>
+    Number of Realizations:
+    <input type="number" id="numRealization" value="10" min="1">
+  </label>
+
+  <br><br>
+
+  <button onclick="runQuery2()">Run</button>
+
+  <hr>
+
+  <iframe
+    id="resultFrame"
+    width="100%"
+    height="100%"
+    style="border:1px solid #ccc;"
+  ></iframe>
+
+</main>
+
+
+
+    
   </main>
      <script>
 function runQuery() {
@@ -89,6 +167,28 @@ function runQuery() {
     "?SizeOfCoefficientTuple=" + SizeOfCoefficientTuple  + "&plotStyle=" + plotStyle + "&RandomUnitarySize=" + RandomUnitarySize;
 
   document.getElementById("resultFrame").src = url;
+
+  function runQuery2() {
+  const k = encodeURIComponent(document.getElementById("k").value);
+  const plotStyle = encodeURIComponent(document.getElementById("plotStyle").value);
+  const SampleSize = encodeURIComponent(document.getElementById("SampleSize").value);
+  const MatrixStartSize = encodeURIComponent(document.getElementById("MatrixStartSize").value);
+  const MatrixStopSize = encodeURIComponent(document.getElementById("MatrixStopSize").value);
+  const d = encodeURIComponent(document.getElementById("d").value);
+  const numRealization = encodeURIComponent(document.getElementById("numRealization").value);
+
+  const url =
+    "https://www.wolframcloud.com/obj/lodewykjansenva/VoicLab/LinearPencilSpecRadius" +
+    "?k=" + k +
+    "&plotStyle=" + plotStyle +
+    "&SampleSize=" + SampleSize +
+    "&MatrixStartSize=" + MatrixStartSize +
+    "&MatrixStopSize=" + MatrixStopSize +
+    "&d=" + d +
+    "&numRealization=" + numRealization;
+
+  document.getElementById("resultFrame").src = url;
+}
 }
 </script> 
 <!-- External JavaScript -->
