@@ -34,7 +34,7 @@
         <li><a href="/useful_resources.html">Useful Resources</a></li>
       </ul>
     </li>
-         <li><a href="VoicLab/LinearPencils.html">Linear Pencils</a></li>
+         <li><a href="LinearPencils.html">Linear Pencils</a></li>
         <li><a href="#">Rational Functions</a></li>
         <li><a href="#">General NC-Polynomials</a></li>
         <li><a href="#">Monte Carlo Simulations</a></li>
@@ -64,24 +64,37 @@
     <input type="number" name="x" value="6">
   </label>
   <br><br>
-
-  <button type="submit">Submit</button>
-</form>
-<hr>   
-    <button onclick="runQuery()">Run</button>
-
-
-<h3>Result:</h3>
-<div id="result">Waiting…</div>
   </div>
 
  <div class="grid">
   <div class="card">
-    <h2>App 2</h2>
-    <p><strong>text</strong></p>
+    <h2>Example 2</h2>
+    <p><strong>In Example 1 we open a new browser page, but here we retrieve the data from that browser page and display here.</strong></p>
     <blockquote>
       More text here
     </blockquote>
+
+    <h2>Query Wolfram Cloud</h2>
+
+<label>
+  Name:
+  <input type="text" id="name" value="Vikus">
+</label>
+<br><br>
+
+<label>
+  x:
+  <input type="number" id="x" value="6">
+</label>
+<br><br>
+
+<button onclick="runQuery()">Run</button>
+
+<hr>
+
+<h3>Result:</h3>
+<div id="result">Waiting…</div>
+
   </div>
 
   <div class="card">
