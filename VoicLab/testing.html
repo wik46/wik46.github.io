@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Wolfram Cloud Inline Result</title>
+</head>
+<body>
+
+<h2>Query Wolfram Cloud</h2>
+
+<label>
+  Name:
+  <input type="text" id="name" value="Vikus">
+</label>
+<br><br>
+
+<label>
+  x:
+  <input type="number" id="x" value="6">
+</label>
+<br><br>
+
+<button onclick="runQuery()">Run</button>
+
+<hr>
+
+<h3>Result:</h3>
+<div id="result">Waiting…</div>
+
+<script>
+function runQuery() {
+  const name = encodeURIComponent(document.getElementById("name").value);
+  const x = encodeURIComponent(document.getElementById("x").value);
+
+  const url =
+    "https://www.wolframcloud.com/obj/7a5188df-54d0-4a04-8f61-d6cf21c04e6d" +
+    "?name=" + name + "&x=" + x;
+
+  fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("result").innerHTML = data;
+    })
+    .catch(err => {
+      document.getElementById("result").innerText =
+        "Error: " + err;
+    });
+}
+</script>
+
+</body>
+</html>
