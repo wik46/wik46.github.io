@@ -8,6 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- External stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']]
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
 <body>
   <nav aria-label="Main navigation">
@@ -46,6 +57,37 @@
     <img src="Sage_2.jpg" width="300" height="300" alt="Mathematics-inspired artwork"/>
   </div>
 
+   <div>
+     <figure style="text-align: center; max-width: 800px; margin: auto;">
+  <img src="assets/images/LinearPencilSpectrumExbest.gif" 
+       alt="Eigenvalue development of a linear pencil evaluated at Haar unitaries"
+       style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" />
+
+  <figcaption style="margin-top: 12px; font-size: 0.95rem; line-height: 1.4;">
+    This animation shows the linear pencil
+    \[
+    L(U_1,U_2) = I + A_1 U_1 + A_2 U_2
+    \]
+    evaluated at two independent \( d \times d \) Haar-distributed random unitaries.
+    The figure illustrates the development of the eigenvalues as the unitary dimension \( d \) increases.
+    <br><br>
+    \[
+    A_1 =
+    \begin{pmatrix}
+    0.218011 & 0.218011 + 1.74409 i \\
+    0 & 0
+    \end{pmatrix},
+    \qquad
+    A_2 =
+    \begin{pmatrix}
+    0 & 0.218011 + 1.74409 i \\
+    0.218011 & 0.436022
+    \end{pmatrix}.
+    \]
+  </figcaption>
+</figure>
+
+   </div> 
 </main>
   
 <!-- External JavaScript -->
