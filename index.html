@@ -3,25 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vikus JvRensburg's Webpage</title>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vikus van Rensburg's Webpage</title>
+
   <!-- External stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['\\(', '\\)']],
-      displayMath: [['\\[', '\\]']]
-    },
-    svg: { fontCache: 'global' }
-  };
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <style>
+    .bio-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .bio-text {
+      flex: 1;
+    }
+
+    .bio-photo img {
+      width: 280px;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .bio-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .bio-photo img {
+        width: 220px;
+      }
+    }
+  </style>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 </head>
+
 <body>
-  <nav aria-label="Main navigation">
+
+<nav aria-label="Main navigation">
   <span class="menu-toggle">☰</span>
 
   <ul id="nav-list">
@@ -38,60 +71,91 @@
         <li><a href="useful_resources.html">Useful Resources</a></li>
       </ul>
     </li>
+
     <li><a href="VoicLab/index.html">VoicLab</a></li>
   </ul>
 </nav>
+
 <main>
-  
 
   <h1>Vikus van Rensburg's Webpage</h1>
-  <p>Under construction!</p>
-  <p>
-    "The only way to learn mathematics is to do mathematics. That tenet is the
-    foundation of the do-it-yourself, Socratic, or Texas method, the method in
-    which the teacher plays the role of an omniscient but largely uncommunicative referee between the learner and the facts." 
-    – Paul Halmos
-  </p>
-<!--
-  <div class="center-img">
-    <img src="Sage_2.jpg" width="300" height="300" alt="Mathematics-inspired artwork"/>
+
+  <div class="bio-container">
+
+    <div class="bio-text">
+
+      <p>
+        I am a Ph.D. candidate in Mathematics at the University of Florida,
+        working under the supervision of Mike Jury. I earned a B.S. in
+        Mathematics from Oregon State University in 2023 and began my graduate
+        studies at the University of Florida the same year. I completed my
+        M.S. in Mathematics in 2025 and subsequently advanced to Ph.D.
+        candidacy.
+      </p>
+
+      <p>
+        My research interests lie in random matrix theory and free probability.
+        My current work focuses on the development of a free strong Szegő limit
+        theorem, where the second-order Szegő asymptotics are described through
+        fluctuation moments of independent random unitary matrices. More
+        broadly, I am interested in the interplay between free probability,
+        operator theory, and random matrix theory.
+      </p>
+
+      <p>
+        Originally from Pretoria, South Africa, I was born and raised there
+        before moving to the United States in 2020 to pursue my studies in
+        mathematics.
+      </p>
+
+    </div>
+
+    <div class="bio-photo">
+      <img src="assets/images/vikus.jpg"
+           alt="Vikus van Rensburg">
+    </div>
+
   </div>
--->
-   <div>
-     <figure style="text-align: center; max-width: 800px; margin: auto;">
-  <img src="assets/images/LinearPencilSpectrumExbest.gif" 
-       alt="Eigenvalue development of a linear pencil evaluated at Haar unitaries"
-       style="width: 80%; height: auto; border: 1px solid #ccc; border-radius: 8px;" />
 
-  <figcaption style="margin-top: 12px; font-size: 0.95rem; line-height: 1.4;">
-    This animation shows the linear pencil
-    \[
-    L_X(U_1,U_2) = I + X_1\otimes U_1 + X_2\otimes U_2
-    \]
-    evaluated at two independent \( d \times d \) Haar-distributed random unitaries.
-    The figure illustrates the development of the eigenvalues as the unitary dimension \( d \) increases.
-    <br><br>
-    \[
-    X_1 =
-    \begin{pmatrix}
-    0.218011 & 0.218011 + 1.74409 i \\
-    0 & 0
-    \end{pmatrix},
-    \qquad
-    X_2 =
-    \begin{pmatrix}
-    0 & 0.218011 + 1.74409 i \\
-    0.218011 & 0.436022
-    \end{pmatrix}.
-    \]
-  </figcaption>
-</figure>
+  <figure style="text-align: center; max-width: 800px; margin: auto;">
+    <img src="assets/images/LinearPencilSpectrumExbest.gif"
+         alt="Eigenvalue development of a linear pencil evaluated at Haar unitaries"
+         style="width: 80%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
 
-   </div> 
+    <figcaption style="margin-top: 12px; font-size: 0.95rem; line-height: 1.4;">
+      This animation shows the linear pencil
+      \[
+      L_X(U_1,U_2)=I+X_1\otimes U_1+X_2\otimes U_2
+      \]
+      evaluated at two independent \(d\times d\) Haar-distributed random
+      unitaries. The figure illustrates the development of the eigenvalues
+      as the unitary dimension \(d\) increases.
+
+      <br><br>
+
+      \[
+      X_1=
+      \begin{pmatrix}
+      0.218011 & 0.218011+1.74409i\\
+      0 & 0
+      \end{pmatrix},
+      \qquad
+      X_2=
+      \begin{pmatrix}
+      0 & 0.218011+1.74409i\\
+      0.218011 & 0.436022
+      \end{pmatrix}.
+      \]
+    </figcaption>
+  </figure>
+
 </main>
-  
+
 <!-- External JavaScript -->
 <script src="assets/js/nav.js" defer></script>
+
+</body>
+</html>
 </body>
 </html>
 
