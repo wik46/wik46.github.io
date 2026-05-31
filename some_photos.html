@@ -27,7 +27,7 @@
       border: 1px solid #ccc;
     }
 
-    /* --- NEW: Photo Timeline Styles --- */
+    /* --- Photo Timeline Styles --- */
     .photo-timeline {
       margin-top: 50px;
     }
@@ -67,12 +67,80 @@
       border-radius: 4px;
       margin-bottom: 12px;
       border: 1px solid #eee;
+      cursor: pointer; /* Makes it clear the image is clickable */
+      transition: opacity 0.2s;
+    }
+
+    .timeline-item img:hover {
+      opacity: 0.85; /* Slight fade on hover to indicate clickability */
     }
 
     .timeline-item figcaption {
       font-size: 0.95em;
       color: #555;
       line-height: 1.5;
+    }
+
+    /* --- NEW: Lightbox Modal Styles --- */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; 
+      z-index: 1000; /* Sit on top of everything */
+      padding-top: 60px; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      animation-name: zoom;
+      animation-duration: 0.3s;
+    }
+
+    #modalCaption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 15px 0;
+      font-size: 1.1em;
+      line-height: 1.5;
+      animation-name: zoom;
+      animation-duration: 0.3s;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0.95); opacity: 0;} 
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .close-modal:hover,
+    .close-modal:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     /* Mobile adjustments */
@@ -86,6 +154,9 @@
       }
       .gallery-grid {
         grid-template-columns: 1fr; /* 1 column on small mobile screens */
+      }
+      .modal-content {
+        max-width: 95%;
       }
     }
   </style>
@@ -139,6 +210,7 @@
           <strong>2026:</strong> All the helpers at Unversity of Florida's Mathfest.
         </figcaption>
       </figure>
+      
       <figure class="timeline-item">
         <img src="assets/images/mathslam2026talking.JPEG" alt="Presenting at a mathslam 2026">
         <figcaption>
@@ -152,7 +224,8 @@
           <strong>2026:</strong> Third place at University of Florida's Mathslam. Here are all the contestants and judges.
         </figcaption>
       </figure>
-       <figure class="timeline-item">
+      
+      <figure class="timeline-item">
         <img src="assets/images/mathfest2025.jpg" alt="Unversity of Florida Mathfest 2025.">
         <figcaption>
           <strong>2025:</strong> All the helpers at Unversity of Florida's Mathfest.
@@ -163,6 +236,49 @@
   </section>
 
 </main>
+
+<div id="imageModal" class="modal">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="modalCaption"></div>
+</div>
+
+<script>
+  // Get the modal elements
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const captionText = document.getElementById("modalCaption");
+  const closeBtn = document.querySelector(".close-modal");
+
+  // Get all images inside the gallery timeline
+  const images = document.querySelectorAll(".timeline-item img");
+
+  // Loop through images and add a click event listener to each
+  images.forEach(img => {
+    img.addEventListener("click", function() {
+      modal.style.display = "block"; // Show the modal
+      modalImg.src = this.src;       // Set the high-res image source
+      
+      // Grab the HTML from the caption right below the image to display in the modal
+      const figcaption = this.nextElementSibling;
+      if (figcaption) {
+        captionText.innerHTML = figcaption.innerHTML;
+      }
+    });
+  });
+
+  // Close the modal when clicking the 'X'
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close the modal when clicking anywhere on the dark background
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 
 </body>
 </html>
