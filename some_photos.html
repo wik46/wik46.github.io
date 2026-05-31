@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vikus van Rensburg</title>
 
-  <!-- External stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
+    /* Existing Bio Styles */
     .bio-container {
       display: flex;
       align-items: flex-start;
@@ -27,14 +27,65 @@
       border: 1px solid #ccc;
     }
 
+    /* --- NEW: Photo Timeline Styles --- */
+    .photo-timeline {
+      margin-top: 50px;
+    }
+
+    .photo-timeline h2 {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      /* Automatically creates columns that are at least 250px wide */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .timeline-item {
+      background-color: #fcfcfc;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 0; /* Resets default browser margin for <figure> */
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    /* Subtle hover effect */
+    .timeline-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .timeline-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      border: 1px solid #eee;
+    }
+
+    .timeline-item figcaption {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       .bio-container {
         flex-direction: column;
         align-items: center;
       }
-
       .bio-photo img {
         width: 220px;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr; /* 1 column on small mobile screens */
       }
     }
   </style>
@@ -59,7 +110,6 @@
 
   <ul id="nav-list">
     <li><a href="index.html">Home</a></li>
-
     <li>
       <a href="#" class="dropdown-toggle">Menu ▾</a>
       <ul class="dropdown-menu">
@@ -72,14 +122,47 @@
         <li><a href="useful_resources.html">Useful Resources</a></li>
       </ul>
     </li>
-
     <li><a href="VoicLab/index.html">VoicLab</a></li>
   </ul>
 </nav>
 
 <main>
+  
+  <section class="photo-timeline">
+    <h2>Some pictures</h2>
 
-</body>
-</html>
+    <div class="gallery-grid">
+      
+      <figure class="timeline-item">
+        <img src="assets/images/mathfest2026.JPG" alt="Unversity of Florida Mathfest 2026.">
+        <figcaption>
+          <strong>2026:</strong> All the helpers at Unversity of Florida's Mathfest.
+        </figcaption>
+      </figure>
+      <figure class="timeline-item">
+        <img src="assets/images/mathslam2026talking.JPEG" alt="Presenting at a mathslam 2026">
+        <figcaption>
+          <strong>2026:</strong> Presenting my research in 10 minutes at Mathslam.
+        </figcaption>
+      </figure>
+
+      <figure class="timeline-item">
+        <img src="assets/images/mathslam2026.JPEG" alt="mathslam 2026">
+        <figcaption>
+          <strong>2026:</strong> Third place at University of Florida's Mathslam. Here are all the contestants and judges.
+        </figcaption>
+      </figure>
+       <figure class="timeline-item">
+        <img src="assets/images/mathfest2025.jpg" alt="Unversity of Florida Mathfest 2025.">
+        <figcaption>
+          <strong>2025:</strong> All the helpers at Unversity of Florida's Mathfest.
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+</main>
+
 </body>
 </html>
