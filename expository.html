@@ -1,58 +1,118 @@
 <!DOCTYPE html>
-<html>
-<head> 
- <meta charset="UTF-8">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expository</title>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- External stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <nav aria-label="Main navigation">
-  <span class="menu-toggle">☰</span>
+    <span class="menu-toggle">☰</span>
 
-  <ul id="nav-list">
-    <li><a href="index.html">Home</a></li>
+    <ul id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#" class="dropdown-toggle">Menu ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="research_interest.html">Research Interests</a></li>
+          <li><a href="talks.html">Talks and Conferences</a></li>
+          <li><a href="some_photos.html">Photos</a></li>
+          <li><a href="expository.html">Expository</a></li>
+          <li><a href="teaching/teaching.html">Teaching</a></li>
+          <li><a href="math_media.html">Mathematics Media</a></li>
+          <li><a href="useful_resources.html">Useful Resources</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-    <li>
-      <a href="#" class="dropdown-toggle">Menu ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="research_interest.html">Research Interests</a></li>
-        <li><a href="talks.html">Talks and Conferences</a></li>
-       <li><a href="some_photos.html">Photos</a></li>
-        <li><a href="expository.html">Expository</a></li>
-        <li><a href="teaching/teaching.html">Teaching</a></li>
-        <li><a href="math_media.html">Mathematics Media</a></li>
-        <li><a href="useful_resources.html">Useful Resources</a></li>
+  <main>
+    <h1>Expository Notes</h1>
+
+    <!-- ==========================================
+         UNDERGRADUATE COURSEWORK BY FIELD
+         ========================================== -->
+    <h2>Expository: Undergraduate Coursework</h2>
+
+    <section class="field-section">
+      <h3>Differential Calculus</h3>
+      <ul>
+        <!-- Add Differential Calculus PDFs here -->
+        <li><em>Notes coming soon.</em></li>
       </ul>
-    </li>
-  </ul>
-</nav>
-<main>
+    </section>
 
-<h2>Expository: Undergraduate Courework</h2>
-  <p><a href="https://wik46.github.io/expositor_docs/Why Do Ee Care About Power Series_.pdf">Why we care about power series?</a></p>
-<p><a href="https://wik46.github.io/expositor_docs/Why Care About Ortogonality_.pdf">Why we care about orthogonality?</a></p>
- <p><a href="https://wik46.github.io/expositor_docs/Review_of_GreenStokesaDivergence.pdf">Review of multivariate FTC's</a></p>
+    <section class="field-section">
+      <h3>Integral Calculus</h3>
+      <ul>
+        <li>
+          <a href="https://wik46.github.io/expositor_docs/Why Do Ee Care About Power Series_.pdf">
+            Why do we care about power series?
+          </a>
+        </li>
+      </ul>
+    </section>
 
+    <section class="field-section">
+      <h3>Multivariate Calculus</h3>
+      <ul>
+        <li>
+          <a href="https://wik46.github.io/expositor_docs/Review_of_GreenStokesaDivergence.pdf">
+            Review of multivariate FTCs (Green's, Stokes', and Divergence)
+          </a>
+        </li>
+      </ul>
+    </section>
 
- <h2>Expository: Graduate Courework</h2> 
+    <section class="field-section">
+      <h3>Linear Algebra</h3>
+      <ul>
+        <li>
+          <a href="https://wik46.github.io/expositor_docs/Why Care About Ortogonality_.pdf">
+            Why do we care about orthogonality?
+          </a>
+        </li>
+      </ul>
+    </section>
 
+    <!-- COPY-PASTE TEMPLATE FOR NEW FIELDS:
+    <section class="field-section">
+      <h3>New Field Name</h3>
+      <ul>
+        <li><a href="expositor_docs/your_file.pdf">Document Title</a></li>
+      </ul>
+    </section>
+    -->
 
-  <h2>Expository: Own Research Area</h2>
-  See
-  <a href="https://wik46.github.io/research_interest.html">Reseach page</a>
+    <!-- ==========================================
+         GRADUATE COURSEWORK
+         ========================================== -->
+    <h2>Expository: Graduate Coursework</h2>
+    <section class="field-section">
+      <ul>
+        <li><em>Notes coming soon.</em></li>
+      </ul>
+    </section>
 
-  <h2>Usefull Summaries</h2>
+    <!-- ==========================================
+         RESEARCH & SUMMARIES
+         ========================================== -->
+    <h2>Expository: Own Research Area</h2>
+    <p>See my <a href="https://wik46.github.io/research_interest.html">Research page</a>.</p>
 
-   <p><a href="expositor_docs/Big_and_Little_O.pdf">Big-O Notation</a></p>  
-
-
+    <h2>Useful Summaries</h2>
+    <section class="field-section">
+      <ul>
+        <li>
+          <a href="expositor_docs/Big_and_Little_O.pdf">Big-O Notation</a>
+        </li>
+      </ul>
+    </section>
   </main>
- </main>
-    
-<!-- External JavaScript -->
-<script src="assets/js/nav.js" defer></script>
+
+  <!-- External JavaScript -->
+  <script src="assets/js/nav.js" defer></script>
 </body>
+</html>
